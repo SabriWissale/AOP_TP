@@ -7,11 +7,9 @@ import metier.MetierBanqueImpl;
 import java.util.Scanner;
 
 public class Application {
-    //il faut indiquer à l IDE qu'on est en train de compiler avec aspectj -->
-    //settings-> build, execution, deployment -> compiler ->java compiler--> ue compiler --> ajc et dans le path : C:\aspectj1.9\lib\aspectjtools.jar
-    //C:\aspectj1.9\lib\aspectjtools.jar -> le tisseur d'aspect
+
     public static void main(String[] args){
-        //System.out.println("Message from Main Application");
+
         new Application().start();
     }
     public void start(){
@@ -25,14 +23,14 @@ public class Application {
             metierBanque.addCompte(new Compte(code, solde));
             while (true) {
                 try {
-                    System.out.println("Type Operation: ");
+                    System.out.println("Type de l Operation: ");
                     String type = scanner.next();
-                    if(type.equals("q")) break;
+                    if(type.equals("quit")) break;
                     System.out.println("Montant: ");
                     double montant = scanner.nextDouble();
-                    if (type.equals("v")) {
+                    if (type.equals("versement")) {
                         metierBanque.verser(code, montant);
-                    } else if (type.equals("r")) {
+                    } else if (type.equals("retrait")) {
                         metierBanque.retirer(code, montant);
                     }
                     Compte compte = metierBanque.consulter(code);

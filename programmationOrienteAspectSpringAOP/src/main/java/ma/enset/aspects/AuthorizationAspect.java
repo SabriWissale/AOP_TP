@@ -29,7 +29,5 @@ public class AuthorizationAspect {
         }
         throw new RuntimeException("Unauthorized 403");
     }
-    //@AfterReturning //s appliquer aux methodes qui retournent des resultats
-    //@AfterThrowing //methodes qui generent err
 
 }

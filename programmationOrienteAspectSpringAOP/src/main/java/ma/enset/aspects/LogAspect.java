@@ -11,20 +11,14 @@ import org.springframework.stereotype.Component;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-@Component //car au moment de l'execution il doit etre instancier
+@Component
 @Aspect
-@EnableAspectJAutoProxy //demander spring au demarrage de hercher les pointcut et genereer un proxy pour implementer le code advice
+@EnableAspectJAutoProxy
 public class LogAspect {
-    //code advice
-    /*
-    @Before("execution(* ma.enset.service..*(..))")
-    public void log(){
-        System.out.println("From logging Aspects... Before");
-    }
-    */
+
     Logger logger = Logger.getLogger(LogAspect.class.getName());
-    //@Around("execution(* ma.enset.service..*(..))")
-    @Around("@annotation(ma.enset.aspects.Log)") //toutes les methodes qui sont precedées par cette annotation, nous appliquant ce code advice
+
+    @Around("@annotation(ma.enset.aspects.Log)")
     public Object log(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         long t1 = System.currentTimeMillis();
         logger.info("From logging Aspects... Before"+ proceedingJoinPoint.getSignature());

@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class PatchRetiraitAspect {
+public class PatchRetraitAspect {
     @Pointcut("execution(* metier.MetierBanqueImpl.retirer(..))")
     public void pointcut1(){}
     @Around("pointcut1() && args(code, montant)")

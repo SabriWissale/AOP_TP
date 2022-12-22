@@ -16,7 +16,7 @@ public class MetierBanqueImpl implements  IMetierBanque{
         compte.setSolde(compte.getSolde()+montant);
     }
 
-    //ici on ne fait pas un etst si le montant est suffisant ou pas
+
     @Override
     public void retirer(Long code, double montant) {
         Compte compte = compteMap.get(code);

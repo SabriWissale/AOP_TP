@@ -13,7 +13,7 @@ public class Application {
         try{
             SecurityContext.authenticate("root","1234", new String[]{"ADMIN", "USER"});
             ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Application.class);
-            IMetier metier = applicationContext.getBean(IMetier.class); //retourn moi un bean qui implement cette interface
+            IMetier metier = applicationContext.getBean(IMetier.class);
             System.out.println("*************");
             System.out.println(metier.getClass().getName());
             System.out.println("*************");
