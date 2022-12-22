@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-04T18:25:08.551864800Z</date>
+  <millis>1670178308551</millis>
+  <nanos>864800</nanos>
+  <sequence>0</sequence>
+  <logger>aspects.LogginAspect</logger>
+  <level>INFO</level>
+  <class>metier.MetierBanqueImpl</class>
+  <method>addCompte_aroundBody1$advice</method>
+  <thread>1</thread>
+  <message>Before execute the method void metier.MetierBanqueImpl.addCompte(Compte)</message>
+</record>
+<record>
+  <date>2022-12-04T18:25:08.562871Z</date>
+  <millis>1670178308562</millis>
+  <nanos>871000</nanos>
+  <sequence>1</sequence>
+  <logger>aspects.LogginAspect</logger>
+  <level>INFO</level>
+  <class>metier.MetierBanqueImpl</class>
+  <method>addCompte_aroundBody1$advice</method>
+  <thread>1</thread>
+  <message>After execute the method void metier.MetierBanqueImpl.addCompte(Compte)</message>
+</record>
+<record>
+  <date>2022-12-04T18:25:08.562871Z</date>
+  <millis>1670178308562</millis>
+  <nanos>871000</nanos>
+  <sequence>2</sequence>
+  <logger>aspects.LogginAspect</logger>
+  <level>INFO</level>
+  <class>metier.MetierBanqueImpl</class>
+  <method>addCompte_aroundBody1$advice</method>
+  <thread>1</thread>
+  <message>The execution time of the method is : 13</message>
+</record>
+</log>
